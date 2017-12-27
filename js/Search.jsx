@@ -4,7 +4,7 @@ import preload from '../data.json';
 const Search = () => {
   return (
     <div className="search">
-      <pre><code>{JSON.stringify(preload, null, 4)}</code></pre>
+      {preload.shows.map((show, key) => <h3 key={show.title}>{show.title}</h3>)}
     </div>
   );
 }
