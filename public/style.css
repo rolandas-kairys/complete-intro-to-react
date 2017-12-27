@@ -543,7 +543,7 @@ pre {
      border-radius: inherit;
    }
 
- .show-card {
+ /* .show-card {
      float: left;
    margin-right: 2%;
      border: 2px solid #333;
@@ -554,16 +554,16 @@ pre {
      padding-bottom: 19.8%;
      overflow: hidden;
      margin-bottom: 2%;
-   }
+   } */
 
    .show-card:nth-child(3n), .search > div > a:nth-child(3n) > .show-card {
      margin-right: 0;
    }
 
-   .show-card > img {
+   /* .show-card > img {
      width: 46%;
      float: left;
-   }
+   } */
 
    .show-card > div{
      display: block;
