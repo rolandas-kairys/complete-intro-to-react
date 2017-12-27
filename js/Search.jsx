@@ -3,7 +3,7 @@ import preload from '../data.json';
 import ShowCard from './ShowCard';
 
 class Search extends Component {
-  constructor() {
+  constructor(props) {
     super(props);
 
 
