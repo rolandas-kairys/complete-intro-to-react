@@ -1,7 +1,8 @@
 import React from 'react';
+import { shape, string } from 'prop-types';
 
-const ShowCard = ({ show }) => (
-  <div key={show.title} className="show-card">
+const ShowCard = ({ show, key }) => (
+  <div key={key} className="show-card">
     <img src={`/public/img/posters/${show.poster}`} alt={`${show.title} Show Poster`} />
     <div>
       <h3>{show.title}</h3>
