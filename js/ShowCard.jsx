@@ -1,8 +1,8 @@
 import React from 'react';
 import { shape, string } from 'prop-types';
 
-const ShowCard = ({ show, key }) => (
-  <div key={key} className="show-card">
+const ShowCard = ({ show }) => (
+  <div className="show-card">
     <img src={`/public/img/posters/${show.poster}`} alt={`${show.title} Show Poster`} />
     <div>
       <h3>{show.title}</h3>
@@ -11,5 +11,15 @@ const ShowCard = ({ show, key }) => (
     </div>
   </div>
 );
+
+
+ShowCard.propTypes = {
+  show: shape({
+    poster: string.isRequired,
+    title: string.isRequired,
+    year: string.isRequired,
+    description: string.isRequired
+  }).isRequired
+}
 
 export default ShowCard;
