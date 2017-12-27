@@ -9,6 +9,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   devServer: {
+    historyApiFallback: true,
     publicPath: '/public/'
   },
   resolve: {
