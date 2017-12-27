@@ -19,7 +19,7 @@ class Search extends Component {
       <div className="search">
         <header>
           <h1>s-video</h1>
-          <input type="text" placeholder="Search" />
+          <input value={this.state.searchTerm} type="text" placeholder="Search" />
         </header>
         <div>
           {preload.shows.map((show) =>
