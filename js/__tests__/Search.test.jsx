@@ -1,6 +1,6 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
-import Search from '../js/Search';
+import Search from '../Search';
 
 
 test('Search render correctly', () => {
