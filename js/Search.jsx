@@ -4,14 +4,6 @@
 import React, { Component } from 'react';
 import ShowCard from './ShowCard';
 
-type Show = {
-  title: string,
-  description: string,
-  year: string,
-  imdbID: string,
-  trailer: string,
-  poster: string
-};
 
 class Search extends Component {
   state = {
