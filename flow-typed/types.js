@@ -1,6 +1,7 @@
 // @flow
 
 
+// available on the entire application
 export type Show = {
   title: string,
   description: string,
