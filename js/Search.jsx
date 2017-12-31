@@ -1,4 +1,4 @@
-//@flow-typed
+// @flow
 
 
 import React, { Component } from 'react';
@@ -10,8 +10,7 @@ class Search extends Component {
     searchTerm: ""
   }
 
-
-  handleSearchTermChange = (event) => {
+  handleSearchTermChange = (event: SyntheticKeyboardEvent & { target: HTMLInputElement }) => {
     this.setState({ searchTerm: event.target.value })
   }
 
