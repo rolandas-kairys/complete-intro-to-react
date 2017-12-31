@@ -9,6 +9,12 @@ class Search extends Component {
     searchTerm: ""
   }
 
+
+  props: {
+    shows: Array<{ title: string, description: string, year: string, imdbID: string, trailer: string, poster: string }>
+  };
+
+
   handleSearchTermChange = (event: SyntheticKeyboardEvent & { target: HTMLInputElement }) => {
     this.setState({ searchTerm: event.target.value })
   }
