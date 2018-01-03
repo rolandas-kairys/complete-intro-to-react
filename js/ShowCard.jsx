@@ -3,14 +3,18 @@
 
 import React from 'react';
 import styled from 'styled-components'; // -flow: don't check this (lib) 
+import { Link } from 'react-router-dom';
 
-const Wrapper = styled.div`
+
+const Wrapper = styled(Link)`
   width: 25%;
   border: 2px solid #333;
   border-radius: 25px;
   margin-bottom: 25px;
   padding-right: 10px;
   overflow: hidden;
+  color: black;
+  text-decoration: none;
 `;
 
 const Image = styled.img`
@@ -20,8 +24,9 @@ const Image = styled.img`
 `;
 
 
-const ShowCard = (props: { show: { poster: string, title: string, year: string, description: string } }) => (
-  <Wrapper>
+const ShowCard = (props: { show: { poster: string, title: string, year: string, description: string, imdbID: string } }) => (
+
+  <Wrapper to={`/details/${props.show.imdbID}`} >
     <Image src={`/public/img/posters/${props.show.poster}`} alt={`${props.show.title} Show Poster`} />
     <div>
       <h3>{props.show.title}</h3>
@@ -29,6 +34,7 @@ const ShowCard = (props: { show: { poster: string, title: string, year: string, 
       <p>{props.show.description}</p>
     </div>
   </Wrapper>
+
 );
 
 
