@@ -1,10 +1,24 @@
 // @flow
 
 import React, { Component } from 'react';
+import axios from 'axios';
 import Header from './Header';
+import Spinner from './Spinner';
 
 
 class Details extends Component {
+  state = {
+    apiData: { imdbRating: "" }
+  };
+
+  componentDidMount() {
+    axios.get(`http://localhost:3000/${this.props.show.imdbID}`)
+      .then((response: { data: { imdbRating: string } }) => {
+        this.setState({ apiData: response.data })
+      });
+  }
+
+
   props: { show: Show };
 
   render() {
