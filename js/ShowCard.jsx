@@ -28,8 +28,9 @@ const Image = styled.img`
 
 class ShowCard extends Component {
 
-  shouldComponentUpdate() {
+  shouldComponentUpdate(nextProps: any) {
     return false;          // once it is rendered - do not update
+    // return this.props.rating !== nextProps.rating; // updates only if rating changes
   }
 
   props: { show: { poster: string, title: string, year: string, description: string, imdbID: string } }
