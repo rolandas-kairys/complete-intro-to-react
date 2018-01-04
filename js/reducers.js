@@ -3,6 +3,10 @@ const DEFAULT_STATE = {
 };
 
 
+const setSearchTerm = (state, action) => {
+  return Object.assign({}, state, { searchTerm: action.payload });
+}
+
 
 const rootReducer = (state = DEFAULT_STATE, action) => {
   switch (action.type) {
