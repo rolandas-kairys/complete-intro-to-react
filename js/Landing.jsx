@@ -2,6 +2,7 @@
 
 
 import React from 'react';
+import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
 
 const Landing = () => (
@@ -14,9 +15,9 @@ const Landing = () => (
 
 
 
+const mapStateToProps = (state) => ({ searchTerm: store.searchTerm }); // arrow function returning object
 
 
 
 
-
-export default Landing;
+export default connect(mapStateToProps)(Landing);
