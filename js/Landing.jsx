@@ -15,7 +15,7 @@ const Landing = () => (
 
 
 
-const mapStateToProps = (state) => ({ searchTerm: store.searchTerm }); // arrow function returning object
+const mapStateToProps = (state) => ({ searchTerm: state.searchTerm }); // arrow function returning object
 
 
 

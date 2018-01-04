@@ -1,7 +1,7 @@
 import { SET_SEARCH_TERM } from './actions';
 
 const DEFAULT_STATE = {
-  searchTerm: ""
+  searchTerm: "something"
 };
 
 
@@ -12,7 +12,7 @@ const setSearchTerm = (state, action) => {
 
 const rootReducer = (state = DEFAULT_STATE, action) => {
   switch (action.type) {
-    case: SET_SEARCH_TERM:
+    case SET_SEARCH_TERM:
       return setSearchTerm(state, action);
 
 
