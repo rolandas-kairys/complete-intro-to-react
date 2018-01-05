@@ -8,11 +8,14 @@ import { object } from 'prop-types';
 import { setSearchTerm } from './actionCreators';
 
 class Landing extends Component {
-  static contextTypes = {
-    history: object
-  };
 
   props: { searchTerm: string, handleSearchTermChange: Function };
+
+  goToSearch = (event: SyntheticEvent) => {
+    event.preventDefault;
+    this.props.history.push("/search");
+  }
+
   render() {
     return (
       <div className="landing">
