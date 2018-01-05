@@ -11,11 +11,7 @@ const Search = (props: {
   shows: Array<Show>
 }) => (
     <div className="search">
-      <Header
-        searchTerm={props.searchTerm}
-        showSearch
-        handleSearchTermChange={props.handleSearchTermChange}
-      />
+      <Header showSearch />
       <div>
         {props.shows
           .filter(
