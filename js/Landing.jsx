@@ -8,6 +8,10 @@ import { object } from 'prop-types';
 import { setSearchTerm } from './actionCreators';
 
 class Landing extends Component {
+  static contextTypes = {
+    history: object
+  };
+
   props: { searchTerm: string, handleSearchTermChange: Function };
   render() {
     return (
