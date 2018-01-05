@@ -9,7 +9,11 @@ import { setSearchTerm } from './actionCreators';
 
 class Landing extends Component {
 
-  props: { searchTerm: string, handleSearchTermChange: Function, history: RouterHistory };
+  props: {
+    searchTerm: string,
+    handleSearchTermChange: Function,
+    history: RouterHistory
+  };
 
   goToSearch = (event: SyntheticEvent) => {
     event.preventDefault;
