@@ -4,12 +4,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from "react-router-dom";
-import { object } from 'prop-types';
+import type { RouterHistory } from 'react-router-dom';
 import { setSearchTerm } from './actionCreators';
 
 class Landing extends Component {
 
-  props: { searchTerm: string, handleSearchTermChange: Function };
+  props: { searchTerm: string, handleSearchTermChange: Function, history: RouterHistory };
 
   goToSearch = (event: SyntheticEvent) => {
     event.preventDefault;
