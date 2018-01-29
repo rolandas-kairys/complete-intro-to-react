@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "dev": "webpack-dev-server",
     "api": "node ratingsAPI.js",
     "build": "webpack",
     "format": "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\"",
